@@ -5,11 +5,11 @@
 
 > Match Regular Expressions with a Nicer 'API'
 
-[![Linux Build Status](https://travis-ci.org/MangoTheCat/rematch.svg?branch=main)](https://travis-ci.org/MangoTheCat/rematch)
-[![Windows Build status](https://ci.appveyor.com/api/projects/status/github/MangoTheCat/rematch?svg=true)](https://ci.appveyor.com/project/gaborcsardi/rematch)
+[![Linux Build Status](https://travis-ci.org/gaborcsardi/rematch.svg?branch=main)](https://travis-ci.org/gaborcsardi/rematch)
+[![Windows Build status](https://ci.appveyor.com/api/projects/status/github/gaborcsardi/rematch?svg=true)](https://ci.appveyor.com/project/gaborcsardi/rematch)
 [![](http://www.r-pkg.org/badges/version/rematch)](http://www.r-pkg.org/pkg/rematch)
 [![CRAN RStudio mirror downloads](http://cranlogs.r-pkg.org/badges/rematch)](http://www.r-pkg.org/pkg/rematch)
-[![Coverage Status](https://img.shields.io/codecov/c/github/MangoTheCat/rematch/main.svg)](https://codecov.io/github/MangoTheCat/rematch?branch=main)
+[![Coverage Status](https://img.shields.io/codecov/c/github/gaborcsardi/rematch/main.svg)](https://codecov.io/github/gaborcsardi/rematch?branch=main)
 
 A small wrapper on 'regexpr' to extract the matches and captured groups
 from the match of a regular expression to a character vector.
@@ -18,7 +18,7 @@ from the match of a regular expression to a character vector.
 
 
 ```r
-source("https://install-github.me/MangoTheCat/rematch")
+source("https://install-github.me/gaborcsardi/rematch")
 ```
 
 ## Usage
@@ -68,7 +68,7 @@ re_match(text = dates, pattern = isodaten)
 ```r
 github_repos <- c("metacran/crandb", "jeroenooms/curl@v0.9.3",
                   "jimhester/covr#47", "hadley/dplyr@*release",
-                  "mangothecat/remotes@550a3c7d3f9e1493a2ba",
+                  "r-lib/remotes@550a3c7d3f9e1493a2ba",
                   "/$&@R64&3")
 owner_rx <- "(?:(?<owner>[^/]+)/)?"
 repo_rx <- "(?<repo>[^/@#]+)"
@@ -85,13 +85,13 @@ out
 ```
 
 ```
-#>      .match                                     owner         repo     
-#> [1,] "metacran/crandb"                          "metacran"    "crandb" 
-#> [2,] "jeroenooms/curl@v0.9.3"                   "jeroenooms"  "curl"   
-#> [3,] "jimhester/covr#47"                        "jimhester"   "covr"   
-#> [4,] "hadley/dplyr@*release"                    "hadley"      "dplyr"  
-#> [5,] "mangothecat/remotes@550a3c7d3f9e1493a2ba" "mangothecat" "remotes"
-#> [6,] "/$&@R64&3"                                ""            ""       
+#>      .match                               owner         repo     
+#> [1,] "metacran/crandb"                    "metacran"    "crandb" 
+#> [2,] "jeroenooms/curl@v0.9.3"             "jeroenooms"  "curl"   
+#> [3,] "jimhester/covr#47"                  "jimhester"   "covr"   
+#> [4,] "hadley/dplyr@*release"              "hadley"      "dplyr"  
+#> [5,] "r-lib/remotes@550a3c7d3f9e1493a2ba" "r-lib"       "remotes"
+#> [6,] "/$&@R64&3"                           ""            ""       
 #>      subdir ref                    pull release    catchall   
 #> [1,] ""     ""                     ""   ""         ""         
 #> [2,] ""     "v0.9.3"               ""   ""         ""         
@@ -103,4 +103,4 @@ out
 
 ## License
 
-MIT © Mango Solutions
+MIT © Mango Solutions; Posit Software, PBC
