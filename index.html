@@ -35,7 +35,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">rematch</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.0.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.0.1.9000</span>
       </span>
     </div>
 
@@ -73,7 +73,7 @@
 <blockquote>
 <p>Match Regular Expressions with a Nicer ‘API’</p>
 </blockquote>
-<p><a href="https://travis-ci.org/gaborcsardi/rematch" class="external-link"><img src="https://travis-ci.org/gaborcsardi/rematch.svg?branch=main" alt="Linux Build Status"></a> <a href="https://ci.appveyor.com/project/gaborcsardi/rematch" class="external-link"><img src="https://ci.appveyor.com/api/projects/status/github/gaborcsardi/rematch?svg=true" alt="Windows Build status"></a> <a href="http://www.r-pkg.org/pkg/rematch" class="external-link"><img src="http://www.r-pkg.org/badges/version/rematch"></a> <a href="http://www.r-pkg.org/pkg/rematch" class="external-link"><img src="http://cranlogs.r-pkg.org/badges/rematch" alt="CRAN RStudio mirror downloads"></a> <a href="https://codecov.io/github/gaborcsardi/rematch?branch=main" class="external-link"><img src="https://img.shields.io/codecov/c/github/gaborcsardi/rematch/main.svg" alt="Coverage Status"></a></p>
+<p><a href="https://github.com/gaborcsardi/rematch/actions/workflows/R-CMD-check.yaml" class="external-link"><img src="https://github.com/gaborcsardi/rematch/actions/workflows/R-CMD-check.yaml/badge.svg" alt="R-CMD-check"></a> <a href="https://www.r-pkg.org/pkg/rematch" class="external-link"><img src="https://www.r-pkg.org/badges/version/rematch"></a> <a href="https://www.r-pkg.org/pkg/rematch" class="external-link"><img src="https://cranlogs.r-pkg.org/badges/rematch" alt="CRAN RStudio mirror downloads"></a> <a href="https://app.codecov.io/github/gaborcsardi/rematch?branch=main" class="external-link"><img src="https://img.shields.io/codecov/c/github/gaborcsardi/rematch/main.svg" alt="Coverage Status"></a></p>
 <p>A small wrapper on ‘regexpr’ to extract the matches and captured groups from the match of a regular expression to a character vector.</p>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
@@ -91,25 +91,25 @@
 <span>  <span class="st">"76-03-02"</span>, <span class="st">"2012-06-30"</span>, <span class="st">"2015-01-21 19:58"</span><span class="op">)</span></span>
 <span><span class="va">isodate</span> <span class="op">&lt;-</span> <span class="st">"([0-9]{4})-([0-1][0-9])-([0-3][0-9])"</span></span>
 <span><span class="fu"><a href="reference/re_match.html">re_match</a></span><span class="op">(</span>text <span class="op">=</span> <span class="va">dates</span>, pattern <span class="op">=</span> <span class="va">isodate</span><span class="op">)</span></span></code></pre></div>
-<pre><code><span><span class="co">#&gt;      .match                       </span></span>
-<span><span class="co">#&gt; [1,] "2016-04-20" "2016" "04" "20"</span></span>
-<span><span class="co">#&gt; [2,] "1977-08-08" "1977" "08" "08"</span></span>
-<span><span class="co">#&gt; [3,] NA           NA     NA   NA  </span></span>
-<span><span class="co">#&gt; [4,] NA           NA     NA   NA  </span></span>
-<span><span class="co">#&gt; [5,] NA           NA     NA   NA  </span></span>
-<span><span class="co">#&gt; [6,] "2012-06-30" "2012" "06" "30"</span></span>
-<span><span class="co">#&gt; [7,] "2015-01-21" "2015" "01" "21"</span></span></code></pre>
+<div class="sourceCode" id="cb4"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;      .match                       </span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1,] "2016-04-20" "2016" "04" "20"</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [2,] "1977-08-08" "1977" "08" "08"</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [3,] NA           NA     NA   NA  </span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [4,] NA           NA     NA   NA  </span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [5,] NA           NA     NA   NA  </span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [6,] "2012-06-30" "2012" "06" "30"</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [7,] "2015-01-21" "2015" "01" "21"</span></span></code></pre></div>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">isodaten</span> <span class="op">&lt;-</span> <span class="st">"(?&lt;year&gt;[0-9]{4})-(?&lt;month&gt;[0-1][0-9])-(?&lt;day&gt;[0-3][0-9])"</span></span>
 <span><span class="fu"><a href="reference/re_match.html">re_match</a></span><span class="op">(</span>text <span class="op">=</span> <span class="va">dates</span>, pattern <span class="op">=</span> <span class="va">isodaten</span><span class="op">)</span></span></code></pre></div>
-<pre><code><span><span class="co">#&gt;      .match       year   month day </span></span>
-<span><span class="co">#&gt; [1,] "2016-04-20" "2016" "04"  "20"</span></span>
-<span><span class="co">#&gt; [2,] "1977-08-08" "1977" "08"  "08"</span></span>
-<span><span class="co">#&gt; [3,] NA           NA     NA    NA  </span></span>
-<span><span class="co">#&gt; [4,] NA           NA     NA    NA  </span></span>
-<span><span class="co">#&gt; [5,] NA           NA     NA    NA  </span></span>
-<span><span class="co">#&gt; [6,] "2012-06-30" "2012" "06"  "30"</span></span>
-<span><span class="co">#&gt; [7,] "2015-01-21" "2015" "01"  "21"</span></span></code></pre>
+<div class="sourceCode" id="cb6"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;      .match       year   month day </span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1,] "2016-04-20" "2016" "04"  "20"</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [2,] "1977-08-08" "1977" "08"  "08"</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [3,] NA           NA     NA    NA  </span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [4,] NA           NA     NA    NA  </span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [5,] NA           NA     NA    NA  </span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [6,] "2012-06-30" "2012" "06"  "30"</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [7,] "2015-01-21" "2015" "01"  "21"</span></span></code></pre></div>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">github_repos</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"metacran/crandb"</span>, <span class="st">"jeroenooms/curl@v0.9.3"</span>,</span>
 <span>                  <span class="st">"jimhester/covr#47"</span>, <span class="st">"hadley/dplyr@*release"</span>,</span>
@@ -127,20 +127,20 @@
 <span>                     <span class="va">owner_rx</span>, <span class="va">repo_rx</span>, <span class="va">subdir_rx</span>, <span class="va">ref_or_pull_or_release_rx</span><span class="op">)</span></span>
 <span><span class="va">out</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/re_match.html">re_match</a></span><span class="op">(</span>text <span class="op">=</span> <span class="va">github_repos</span>, pattern <span class="op">=</span> <span class="va">github_rx</span><span class="op">)</span></span>
 <span><span class="va">out</span></span></code></pre></div>
-<pre><code><span><span class="co">#&gt;      .match                               owner         repo     </span></span>
-<span><span class="co">#&gt; [1,] "metacran/crandb"                    "metacran"    "crandb" </span></span>
-<span><span class="co">#&gt; [2,] "jeroenooms/curl@v0.9.3"             "jeroenooms"  "curl"   </span></span>
-<span><span class="co">#&gt; [3,] "jimhester/covr#47"                  "jimhester"   "covr"   </span></span>
-<span><span class="co">#&gt; [4,] "hadley/dplyr@*release"              "hadley"      "dplyr"  </span></span>
-<span><span class="co">#&gt; [5,] "r-lib/remotes@550a3c7d3f9e1493a2ba" "r-lib"       "remotes"</span></span>
-<span><span class="co">#&gt; [6,] "/$&amp;@R64&amp;3"                           ""            ""       </span></span>
-<span><span class="co">#&gt;      subdir ref                    pull release    catchall   </span></span>
-<span><span class="co">#&gt; [1,] ""     ""                     ""   ""         ""         </span></span>
-<span><span class="co">#&gt; [2,] ""     "v0.9.3"               ""   ""         ""         </span></span>
-<span><span class="co">#&gt; [3,] ""     ""                     "47" ""         ""         </span></span>
-<span><span class="co">#&gt; [4,] ""     ""                     ""   "*release" ""         </span></span>
-<span><span class="co">#&gt; [5,] ""     "550a3c7d3f9e1493a2ba" ""   ""         ""         </span></span>
-<span><span class="co">#&gt; [6,] ""     ""                     ""   ""         "/$&amp;@R64&amp;3"</span></span></code></pre>
+<div class="sourceCode" id="cb8"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;      .match                               owner        repo      subdir</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1,] "metacran/crandb"                    "metacran"   "crandb"  ""    </span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [2,] "jeroenooms/curl@v0.9.3"             "jeroenooms" "curl"    ""    </span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [3,] "jimhester/covr#47"                  "jimhester"  "covr"    ""    </span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [4,] "hadley/dplyr@*release"              "hadley"     "dplyr"   ""    </span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [5,] "r-lib/remotes@550a3c7d3f9e1493a2ba" "r-lib"      "remotes" ""    </span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [6,] "/$&amp;@R64&amp;3"                          ""           ""        ""    </span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;      ref                    pull release    catchall   </span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [1,] ""                     ""   ""         ""         </span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [2,] "v0.9.3"               ""   ""         ""         </span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [3,] ""                     "47" ""         ""         </span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [4,] ""                     ""   "*release" ""         </span></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [5,] "550a3c7d3f9e1493a2ba" ""   ""         ""         </span></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; [6,] ""                     ""   ""         "/$&amp;@R64&amp;3"</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="license">License<a class="anchor" aria-label="anchor" href="#license"></a>
